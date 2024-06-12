@@ -15,8 +15,12 @@ const about = {
     "Skilled Front-End developer adept at crafting dynamic and engaging web applications.Well-versed in Front-End technologies, including React, Next.js, TypeScript, Bootstrap, Material UI, and beyond",
   info: [
     {
-      fieldName: "Front-End Web Development",
-      fieldValue: "Nermeen Fares",
+      fieldName: "Name",
+      fieldValue: "Nermeen Fares Maher",
+    },
+    {
+      fieldName: "Position",
+      fieldValue: "Front-End Web Development",
     },
     {
       fieldName: "Phone",
@@ -307,15 +311,16 @@ const Resume = () => {
             >
               <div
                 className="
-flex flex-col gap-[30px] 
+flex flex-col gap-[20px] 
 "
               >
                 <h3 className="text-4xl font-bold ">{about.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx:0">
-                  {about.des}
+                <p className="max-w-[680px] text-white/60  xl:mx:0">
+                  {about.description}
                 </p>
+                <hr/>
                 <ul
-                  className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px]
+                  className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[680]
  mx-auto xl:mx-0"
                 >
                   {about.info.map((item, index) => {
@@ -325,7 +330,7 @@ flex flex-col gap-[30px]
                         key={index}
                       >
                         <span className="text-white/60">{item.fieldName}</span>
-                        <span className="text-xl">{item.fieldValue}</span>
+                        <span className="text-small">{item.fieldValue}</span>
                       </li>
                     );
                   })}
