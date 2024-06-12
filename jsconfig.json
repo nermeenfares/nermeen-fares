@@ -1,17 +1,8 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "commonjs",
-    "strict": true,
-    "jsx": "preserve",
-    "baseUrl": ".", // Add this line to set the base URL
+    "baseUrl": ".",
     "paths": {
       "@/*": ["./*"]
-    },
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
-  },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+    }
+  }
 }
