@@ -4,8 +4,13 @@ import Photo from "@/components/Photo";
 import Stats from "@/components/Stats";
 import React from "react";
 import { FiDownload } from "react-icons/fi";
+import Link from "next/link";
 
 const Home = () => {
+  const handleDownload = () => {
+    const sampleFileUrl = '';
+    window.open(sampleFileUrl); // This will open a new tab and initiate the download
+  };
   return (
     <section className="h-full">
       <div className="container mx-auto">
@@ -17,7 +22,7 @@ const Home = () => {
           <div className="text-center xl:text-left order-2 xl:order-none">
             <span>Front-End Developer</span>
             <h1 className="h1 mb-6">
-              Hello I'm <br />{" "}
+              Hello I am <br />{" "}
               <span className="text-accent-hover">Nermeen Fares</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
@@ -27,6 +32,8 @@ const Home = () => {
             </p>
             {/* btns and social mediaaa */}
             <div className="flex flex-col xl:flex-row items-center gap-8 ">
+            <Link  href="https://drive.google.com/file/d/1_EjvT2nVy6XsPRmpqSqYBzxdODSay62C/view?usp=sharing">
+
               <Button
                 variant="outline"
                 size="lg"
@@ -36,6 +43,7 @@ const Home = () => {
                 <span className="text-xl">Download CV</span>
                 <FiDownload />
               </Button>
+            </Link>
               <div className="mb-8 xl:mb-0">
                 <Social
                   containerStyles="flex gap-6 "
